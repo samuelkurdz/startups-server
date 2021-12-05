@@ -4,10 +4,6 @@ import { graphqlHTTP } from 'express-graphql';
 import querySchema from '../graphQL/schemas';
 import resolvers from '../graphQL/resolvers';
 
-
-// The root provides a resolver function for each API endpoint
-
-
 const app = express();
 
 app.use(cors());

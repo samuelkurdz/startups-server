@@ -1,7 +1,7 @@
 {
-  "name": "coffeeroasters-server",
+  "name": "test-server",
   "version": "1.0.0",
-  "description": "server for coffeeroasters application",
+  "description": "server for test GraphQL application",
   "main": "index.js",
   "author": "Samuel Adebayo",
   "license": "MIT",

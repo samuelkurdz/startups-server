@@ -11,8 +11,10 @@
     
     // "rootDir": "./",
     // "outDir": "./",
-    // "baseUrl": "./",
-    // "paths": {},
+    // "baseUrl": ".",
+    // "paths": {
+    //   "@graph/*": ["src/graphQL/*"],
+    // },
 
     /* JavaScript files Support */
     "allowJs": true,
@@ -24,9 +26,7 @@
 
     /* Type Checking */
     "strict": true,
-    "noImplicitAny": true,
-    "alwaysStrict": true,
-
-
-  }
+    "allowUnreachableCode": false,
+    "strictNullChecks": true
+  },
 }
