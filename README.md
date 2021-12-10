@@ -1,0 +1,1 @@
+Architecture used is the Clean Code Architecture
