@@ -1,8 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import { graphqlHTTP } from 'express-graphql';
-import querySchema from '../graphQL/schemas';
-import resolvers from '../graphQL/resolvers';
+
+import resolvers from '@graph/resolvers';
+import querySchema from '@graph/schemas'
 
 const app = express();
 
@@ -21,5 +22,3 @@ app.use('/', (req, res) => {
 });
 
 export default app;
-
-

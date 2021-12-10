@@ -11,10 +11,10 @@
     
     // "rootDir": "./",
     // "outDir": "./",
-    // "baseUrl": ".",
-    // "paths": {
-    //   "@graph/*": ["src/graphQL/*"],
-    // },
+    "baseUrl": "./src",
+    "paths": {
+      "@graph/*": ["graphQL/*"],
+    },
 
     /* JavaScript files Support */
     "allowJs": true,

@@ -58,9 +58,7 @@ const resolvers = {
   },
   startup: ({id}: DatabaseModel): DatabaseModel => {
     const startUp = fakeDataBase.find(startup => startup.id === id);
-    if (!startUp) {
-      throw new Error('no startup exists with id ' + id);
-    }
+    if (!startUp) throw new Error('no startup exists with id ' + id);
     return startUp;
   },
 
@@ -74,9 +72,7 @@ const resolvers = {
   },
   updateStartup: ({id, data}: UpdateStartupProps): DatabaseModel => {
     const startUpIndex = fakeDataBase.findIndex(startup => startup.id === id);
-    if (startUpIndex === -1) {
-      throw new Error('no startup exists with id ' + id);
-    }
+    if (startUpIndex === -1) throw new Error('no startup exists with id ' + id);
     fakeDataBase[id] = {...fakeDataBase[id],...data};
     return fakeDataBase[id];
   }
