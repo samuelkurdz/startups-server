@@ -1,3 +1,11 @@
 {
-  "exec": "ts-node -r tsconfig-paths/register src/server/index.ts"
+  "exec": "ts-node -r tsconfig-paths/register src/server/index.ts",
+  "env": {
+    "DATABASE_USER": "samuelred",
+    "DATABASE_PASSWORD": "SamuelRed",
+    "DATABASE": "myFirstDatabase",
+    "DATABASE_URL": "mongodb://127.0.0.1:27017/Ecommerce",
+    "ONLINE_DATABASE_URL": "mongodb+srv://samuelred:SamuelRed@startups.lhe7z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "TOKEN_DECRYPTER": "redhassomesupersecrettotell"
+  }
 }

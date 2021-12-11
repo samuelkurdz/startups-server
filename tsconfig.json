@@ -14,6 +14,9 @@
     "baseUrl": "./src",
     "paths": {
       "@graph/*": ["graphQL/*"],
+      "@modules/*": ["modules/*"],
+      "@services/*": ["services/*"],
+      "@interfaces/*": ["interfaces/*"],
     },
 
     /* JavaScript files Support */

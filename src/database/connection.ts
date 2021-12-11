@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-const uri = "mongodb+srv://samuelred:SamuelRed@startups.lhe7z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+// const uri = "mongodb+srv://samuelred:SamuelRed@startups.lhe7z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const uri = `mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@startups.lhe7z.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`;
 interface Status {
   error: string | null;
   success: string | null;
