@@ -1,5 +1,5 @@
 {
-  "exec": "ts-node -r tsconfig-paths/register src/server/index.ts",
+  "exec": "ts-node -r tsconfig-paths/register src/server/server.ts",
   "env": {
     "DATABASE_USER": "samuelred",
     "DATABASE_PASSWORD": "SamuelRed",

@@ -13,10 +13,12 @@
     // "outDir": "./",
     "baseUrl": "./src",
     "paths": {
-      "@graph/*": ["graphQL/*"],
-      "@modules/*": ["modules/*"],
-      "@services/*": ["services/*"],
-      "@interfaces/*": ["interfaces/*"],
+      "@database": ["database"],
+      "@graphql/*": ["graphQL/*"],
+      "@interfaces": ["interfaces"],
+      "@controllers": ["controllers"],
+      "@queries": ["queries"],
+
     },
 
     /* JavaScript files Support */
