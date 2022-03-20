@@ -18,6 +18,7 @@
       "@interfaces": ["interfaces"],
       "@controllers": ["controllers"],
       "@queries": ["queries"],
+      "@helpers": ["helpers"],
 
     },
 

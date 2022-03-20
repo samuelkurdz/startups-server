@@ -1,5 +1,5 @@
 import { postgresClient } from "@database";
-import { User } from "@interfaces";
+import { CreateUser, ResponsePayload, User } from "@interfaces";
 
 /** fetch users from database */
 export const fetchAllUsers = async (): Promise<User[]> => {
@@ -12,5 +12,30 @@ export const fetchSingleUser = async (email: string): Promise<User> => {
   const data = await postgresClient.query<User>(`SELECT * FROM users WHERE email = '${email}'`);
   return data.rows[0];
 }
-export const namas = [];
 
+/** create new user onto database */
+export const createUser = async (
+  { email, first_name, last_name, password, user_name }: CreateUser
+): Promise<ResponsePayload<any>> => {
+
+  try {
+    const data = await postgresClient.query<User>(
+      `INSERT INTO users
+        (user_name, first_name, last_name, email, password)
+      VALUES
+        ('${user_name}', '${first_name}', '${last_name}', '${email}', '${password}');
+      `
+    );
+    return {
+      message: 'new user created successfully',
+      status: 'success',
+      data: [],
+    }
+  } catch (error) {
+    return {
+      message: 'error creating new user',
+      status: 'error',
+      data: [],
+    }
+  }
+}
