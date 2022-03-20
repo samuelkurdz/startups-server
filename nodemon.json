@@ -1,4 +1,6 @@
 {
+  "watch": ["src"],
+  "ext": ".ts",
   "exec": "ts-node -r tsconfig-paths/register src/server/server.ts",
   "env": {
     "DATABASE_USER": "samuelred",
