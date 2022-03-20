@@ -19,8 +19,9 @@
       "@controllers": ["controllers"],
       "@queries": ["queries"],
       "@helpers": ["helpers"],
-
+      "@middlewares": ["middlewares"],
     },
+
 
     /* JavaScript files Support */
     "allowJs": true,
@@ -33,6 +34,6 @@
     /* Type Checking */
     "strict": true,
     "allowUnreachableCode": false,
-    "strictNullChecks": true
+    "strictNullChecks": true,
   },
 }

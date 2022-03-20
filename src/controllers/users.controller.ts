@@ -1,5 +1,5 @@
 import { hashUserPassword } from "@helpers";
-import { CreateUser, User } from "@interfaces";
+import { CreateUser } from "@interfaces";
 import { createUser, fetchAllUsers, fetchSingleUser } from "@queries";
 
 // returns all users from database

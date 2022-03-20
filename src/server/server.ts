@@ -15,10 +15,6 @@ const onListening = () => {
   console.log(`Server started and listening on port ${address.port}`);
 };
 
-// initializeDBConnection().then(({ error, success }) => {
-//   error ? console.log(error) : console.log(success);
-// });
-
 postgresClient.connect().then((data) => {
   console.log('postgres database connected successfully');
 }).catch(err => {
