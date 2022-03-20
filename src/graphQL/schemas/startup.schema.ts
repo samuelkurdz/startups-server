@@ -34,6 +34,6 @@ export const startupQuerySchema = `
 
   type Query {
     startups: [StartUp]
-    startup(id: Int!): StartUp
+    startup(email: String!): StartUp
   }
 `;

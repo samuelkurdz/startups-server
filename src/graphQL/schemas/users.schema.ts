@@ -1,10 +1,10 @@
 export const userQuerySchema = `
   type User {
-    id: Int!
+    id: String!
     user_name: String!
     first_name: String!
     last_name: String!
-    password: String!
+    email: String!
   }
 
   type Mutation {
@@ -13,7 +13,7 @@ export const userQuerySchema = `
 
   type Query {
     users: [User]
-    user(id: Int!): User
+    user(email: String!): User
   }
 
 `;

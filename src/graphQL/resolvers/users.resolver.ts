@@ -1,9 +1,12 @@
+import { getSingleUser, getUsers } from "@controllers"
+import { SingleUserQuery } from "@interfaces";
+
 export const usersResolvers = {
-  users: (): any[] => {
-    return []
+  users: () => {
+    return getUsers();
   },
 
-  user: (): any => {
-    return 'user'
+  user: ({email}: SingleUserQuery) => {
+    return getSingleUser(email);
   }
 }

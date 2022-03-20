@@ -13,9 +13,11 @@
     // "outDir": "./",
     "baseUrl": "./src",
     "paths": {
+      "@database": ["database"],
       "@graphql/*": ["graphQL/*"],
       "@interfaces": ["interfaces"],
-      "@database": ["database"],
+      "@controllers": ["controllers"],
+      "@queries": ["queries"],
 
     },
 

@@ -17,16 +17,8 @@ app.use('/graphql', graphqlHTTP({
   graphiql: true,
 }));
 
-// app.use('/', async (req, res) => {
-//   try {
-//     const { rows: Users } = await postgresClient.query<Country>(`Select * from users`);
-//     res.send(Users);
-//   } catch (err) {
-//     if (err instanceof Error) {
-//       console.log(err);
-//       res.send(err.name);
-//     }
-//   }
-// });
+app.use('/', async (req, res) => {
+  res.send('Welcome to my API');
+});
 
 export default app;
