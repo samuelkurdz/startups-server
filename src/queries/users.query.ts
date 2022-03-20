@@ -2,15 +2,23 @@ import { postgresClient } from "@database";
 import { CreateUser, ResponsePayload, User } from "@interfaces";
 
 /** fetch users from database */
-export const fetchAllUsers = async (): Promise<User[]> => {
-  const { rows: users } = await postgresClient.query<User>(`Select * from users`);
-  return users;
+export const fetchAllUsers = async (): Promise<ResponsePayload<User[]>> => {
+  const { rows } = await postgresClient.query<User>(`Select * from users`);
+  return {
+    data: rows,
+    message: 'users fetched',
+    status: 'success'
+  }
 }
 
 /** fetch single user from database using email */
-export const fetchSingleUser = async (email: string): Promise<User> => {
+export const fetchSingleUser = async (email: string): Promise<ResponsePayload<User>> => {
   const data = await postgresClient.query<User>(`SELECT * FROM users WHERE email = '${email}'`);
-  return data.rows[0];
+  return {
+    data: data.rows[0],
+    message: 'user fetched',
+    status: 'success'
+  }
 }
 
 /** create new user onto database */

@@ -6,8 +6,21 @@ export const userQuerySchema = `
     first_name: String
     last_name: String
   }
+  
 
-  type ResponsePayload {
+  type GetUsersResponse {
+    message: String
+    status: String
+    data: [User]
+  }
+
+  type GetSingleUserResponse {
+    message: String
+    status: String
+    data: User
+  }
+
+  type CreateUserRsponsePayload {
     message: String
     status: String
     data: [String]
@@ -22,12 +35,12 @@ export const userQuerySchema = `
   }
 
   type Query {
-    users: [User]
-    user(email: String!): User
+    users: GetUsersResponse
+    user(email: String!): GetSingleUserResponse
   }
 
   type Mutation {
-    newUser(payload: NewUser): ResponsePayload
+    newUser(payload: NewUser): CreateUserRsponsePayload
   }
 
 `;
